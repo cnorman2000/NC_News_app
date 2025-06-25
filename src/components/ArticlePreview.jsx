@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ArticlePreview = ({ article }) => {
   return (
     <section className="articlepreview">
-      <h4>{article.title}</h4>
+      <h3>{article.title}</h3>
       <p>Author: {article.title}</p>
       <p>Topic: {article.topic}</p>
       <p>UpVotes: {article.votes}</p>

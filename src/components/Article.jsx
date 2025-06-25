@@ -17,7 +17,6 @@ const Article = () => {
 
   return (
     <section className="article">
-      <h3>{article.title}</h3>
       <h4>{article.title}</h4>
       <p>Author: {article.title}</p>
       <p>Topic: {article.topic}</p>

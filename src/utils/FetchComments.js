@@ -1,6 +1,6 @@
-async function fetchArticles() {
+async function fetchComments(article_id) {
   const response = await fetch(
-    `https://nc-news-app-b6ap.onrender.com/api/articles`
+    `https://nc-news-app-b6ap.onrender.com/api/articles/${article_id}/comments`
   );
   if (!response.ok) {
     const err = new Error("Could not fetch articles");
@@ -11,4 +11,4 @@ async function fetchArticles() {
   return response.json();
 }
 
-export default fetchArticles;
+export default fetchComments;

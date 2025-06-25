@@ -3,13 +3,17 @@ import "./index.css";
 
 import ArticleList from "./components/ArticleList";
 import Article from "./components/Article";
+import ArticleandComments from "./components/ArticleandComments";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path={"/"} element={<ArticleList />} />
-        <Route path={"/articles/:article_id"} element={<Article />} />
+        <Route
+          path={"/articles/:article_id"}
+          element={<ArticleandComments />}
+        />
       </Routes>
     </>
   );
