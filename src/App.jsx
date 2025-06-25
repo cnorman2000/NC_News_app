@@ -1,13 +1,16 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./index.css";
+
+import ArticleList from "./components/ArticleList";
+import Article from "./components/Article";
 
 function App() {
   return (
     <>
-      <Routes></Routes>
+      <Routes>
+        <Route path={"/"} element={<ArticleList />} />
+        <Route path={"/articles/:article_id"} element={<Article />} />
+      </Routes>
     </>
   );
 }
