@@ -1,16 +1,19 @@
 import { useParams } from "react-router-dom";
 import fetchArticle from "../utils/FetchArticle";
 import { useState, useEffect } from "react";
+import { Vote } from "./Vote";
 
 const Article = () => {
   const { article_id } = useParams();
   const [article, setArticle] = useState({});
+  const [votes, setVotes] = useState(0);
 
   useEffect(() => {
     const asyncGetArticle = async () => {
       const entry = await fetchArticle(article_id);
       setArticle({ ...entry.article });
-      console.log(entry);
+
+      setVotes(response.article.votes);
     };
     asyncGetArticle();
   }, [article_id]);
@@ -24,6 +27,7 @@ const Article = () => {
       <p>Comments: not ready</p>
       <p>Published: not ready</p>
       <img src={article.article_image_url} />
+      <Vote article_id={article_id} setVotes={setVotes} votes={votes} />
     </section>
   );
 };

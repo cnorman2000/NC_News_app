@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
 import ArticleList from "./components/ArticleList";
-import Article from "./components/Article";
+
 import ArticleandComments from "./components/ArticleandComments";
 
 function App() {
