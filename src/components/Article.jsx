@@ -12,11 +12,11 @@ const Article = () => {
     const asyncGetArticle = async () => {
       const entry = await fetchArticle(article_id);
       setArticle({ ...entry.article });
-
-      setVotes(response.article.votes);
     };
     asyncGetArticle();
   }, [article_id]);
+
+  const published = String(new Date(article.created_at));
 
   return (
     <section className="article">
@@ -24,8 +24,7 @@ const Article = () => {
       <p>Author: {article.title}</p>
       <p>Topic: {article.topic}</p>
       <p>UpVotes: {article.votes}</p>
-      <p>Comments: not ready</p>
-      <p>Published: not ready</p>
+      <p>Published: {published}</p>
       <img src={article.article_image_url} />
       <Vote article_id={article_id} setVotes={setVotes} votes={votes} />
     </section>
