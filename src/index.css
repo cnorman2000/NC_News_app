@@ -43,6 +43,13 @@ h5 {
   border: 1px solid;
   background-color: red;
 }
+h7 {
+  font-size: 1.5em;
+  margin-top: 100px;
+  line-height: 1.1em;
+  border-radius: 1px;
+  border: 1px solid;
+}
 
 /* .articleList {
   display: grid;
